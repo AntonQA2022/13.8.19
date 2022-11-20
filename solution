@@ -1,0 +1,15 @@
+volume = int(input("Введите сколько билетов: "))
+price = 0
+for i in range(1, volume+1):
+    print("Билет №", i)
+    old = int(input("какой возраст на билет? "))
+    if old < 18:
+        price += 0
+    elif 18 <= old < 25:
+        price += 990
+    elif old >= 25:
+        price += 1390
+if volume > 3:
+    print("общая сумма за все билеты с учетом скидки 10%: ", price*0.9)
+else:
+    print("общая сумма за все билеты: ", price)
